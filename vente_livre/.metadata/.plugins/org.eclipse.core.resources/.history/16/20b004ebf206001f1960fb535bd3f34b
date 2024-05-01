@@ -1,0 +1,25 @@
+package controller;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Connexion{
+	public static Connection connect() {
+		Connection con=null;
+		try {
+			String url="jdbc:MySQL://localhost:3306/tp3";
+			String login="root";
+		    String mdp="1234";
+		    
+			con=DriverManager.getConnection(url,login,mdp);
+			System.out.println("connected");
+		
+
+		}
+       catch(SQLException e) {
+    	   System.out.println(e);
+       }
+		return con;
+	}
+	
+}
