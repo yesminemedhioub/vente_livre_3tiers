@@ -7,7 +7,7 @@ public class Connexion{
 		Connection con=null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String url="jdbc:MySQL://localhost:3306/mybd";
+			String url="jdbc:MySQL://localhost:3306/basearchitecture";
 			String login="root";
 		    String mdp="1234";
 		    

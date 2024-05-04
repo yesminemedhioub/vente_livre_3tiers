@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -16,5 +17,10 @@ public class Client extends Utilisateur {
 				if (rs.next()) return true;
 				else return false;
 					
+	}
+	
+	public static boolean verifClient(String login,String mdp) {
+		PreparedStatement ps=c.prepareStatement(mdp);
+		
 	}
 }
